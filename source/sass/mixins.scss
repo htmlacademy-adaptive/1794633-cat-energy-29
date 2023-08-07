@@ -1,0 +1,9 @@
+@mixin reset-list-styles {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin Oswald-font {
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
+}

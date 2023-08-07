@@ -1,0 +1,5 @@
+@import "../mixins";
+
+.programs__list {
+  @include reset-list-styles;
+}

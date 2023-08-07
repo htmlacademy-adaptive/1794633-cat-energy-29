@@ -1,0 +1,27 @@
+@import "../mixins";
+
+.contacts__title {
+  @include Oswald-font;
+  color: #111111;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.contacts__description {
+  color: #444444;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.contacts__text {
+  padding-top: 26px;
+  padding-bottom: 26px;
+  display: flex;
+}
+
+.contacts__title {
+  min-width: 140px;
+}
