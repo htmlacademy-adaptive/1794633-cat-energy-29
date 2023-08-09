@@ -1,0 +1,34 @@
+@import "../mixins";
+
+.social-list {
+  @include reset-list-styles;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-list__link {
+  display: inline-block;
+}
+
+.social-list__link--vk {
+  background-image: url("../../img/vkontakte.svg");
+  width: 28px;
+  height: 22px;
+}
+
+.social-list__link--youtube {
+  background-image: url("../../img/youtube.svg");
+  width: 28px;
+  height: 22px;
+}
+
+.social-list__link--telegram {
+  background-image: url("../../img/telegram.svg");
+  width: 28px;
+  height: 22px;
+}

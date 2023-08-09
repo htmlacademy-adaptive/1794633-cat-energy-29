@@ -1,0 +1,18 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.copyright__title {
+  color: #444444;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+}
+
+.copyright__title-link {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
