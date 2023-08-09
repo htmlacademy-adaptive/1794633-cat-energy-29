@@ -1,0 +1,32 @@
+.catalog-card {
+  display: grid;
+  grid-template-areas:
+    "image title"
+    "image specifications"
+    "button button";
+}
+
+.catalog-card__title {
+  grid-area: title;
+}
+
+.catalog-card__image {
+  grid-area: image;
+  align-self: center;
+  justify-self: center;
+}
+
+.catalog-card__specifications {
+  grid-area: specifications;
+}
+
+.catalog-card__specifications-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-card__button {
+  grid-area: button;
+}
+
+

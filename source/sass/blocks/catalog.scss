@@ -9,3 +9,7 @@
   margin-top: 27px;
   margin-bottom: 41px;
 }
+
+.catalog__list {
+  @include reset-list-styles;
+}
