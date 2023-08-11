@@ -4,20 +4,37 @@
     "image title"
     "image specifications"
     "button button";
+  grid-template-columns: 1fr 1fr;
+  padding-top: 11px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #ebebeb;
 }
 
 .catalog-card__title {
   grid-area: title;
+  width: 76px;
+  color: #222222;
+  @include Oswald-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 
 .catalog-card__image {
   grid-area: image;
   align-self: center;
   justify-self: center;
+
 }
 
 .catalog-card__specifications {
   grid-area: specifications;
+  color: #444444;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
 }
 
 .catalog-card__specifications-row {
@@ -27,6 +44,7 @@
 
 .catalog-card__button {
   grid-area: button;
+  margin-top: 13px;
 }
 
 
