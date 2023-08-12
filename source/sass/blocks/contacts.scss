@@ -1,5 +1,9 @@
 @import "../mixins";
 
+.contacts--secondary{
+  background-color: #f2f2f2;
+}
+
 .contacts__title {
   @include Oswald-font;
   color: #111111;
