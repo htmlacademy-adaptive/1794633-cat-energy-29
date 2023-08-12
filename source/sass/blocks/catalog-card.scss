@@ -47,4 +47,29 @@
   margin-top: 13px;
 }
 
+.catalog-card--more {
+  display: block;
+}
 
+.catalog-card__title--more {
+  position: relative;
+  margin-top: 78px;
+  width: 100%;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url("../../img/plus-icon.svg");
+    top: -53px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.catalog-card__description {
+  text-align: center;
+}
