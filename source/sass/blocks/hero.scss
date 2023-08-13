@@ -1,10 +1,8 @@
 @import "../mixins";
 
 .hero {
-  @include Oswald-font;
-  text-align: center;
-  color: #ffffff;
   position: relative;
+  text-align: center;
 
   &::before {
     content: "";
@@ -33,6 +31,8 @@
 }
 
 .hero__slogan {
+  @include Oswald-font;
+  color: #ffffff;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;

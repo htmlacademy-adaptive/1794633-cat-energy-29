@@ -2,4 +2,10 @@
 
 .program__title {
   @include page-title-font;
+  margin-bottom: 37px;
+}
+
+.program__description {
+  text-transform: uppercase;
+  width: 226px;
 }
