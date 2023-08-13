@@ -39,19 +39,19 @@
 }
 
 .features__item--leaf::before {
-  background-image: url("../../img/leaf-icon.svg");
+  background-image: url("../img/leaf-icon.svg");
 }
 
 .features__item--powder::before {
-  background-image: url("../../img/powder-icon.svg");
+  background-image: url("../img/powder-icon.svg");
 }
 
 .features__item--cutlery::before {
-  background-image: url("../../img/cutlery-icon.svg");
+  background-image: url("../img/cutlery-icon.svg");
 }
 
 .features__item--timer::before {
-  background-image: url("../../img/timer-icon.svg");
+  background-image: url("../img/timer-icon.svg");
 }
 
 .features__item:not(:last-child) {

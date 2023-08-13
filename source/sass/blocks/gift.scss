@@ -1,7 +1,7 @@
 .gift {
   background:
     linear-gradient(0deg, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-    url("../../img/cat-in-case.jpg") no-repeat;
+    url("../img/cat-in-case.jpg") no-repeat;
   width: 280px;
   height: 290px;
   padding-top: 186px;
@@ -23,7 +23,7 @@
     content: "";
     position: absolute;
     display: block;
-    background-image: url("../../img/gift-icon.svg");
+    background-image: url("../img/gift-icon.svg");
     top: -128px;
     left: 50%;
     transform: translateX(-50%);

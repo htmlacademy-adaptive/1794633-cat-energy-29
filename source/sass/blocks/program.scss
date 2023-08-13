@@ -1,0 +1,5 @@
+@import "../mixins";
+
+.program__title {
+  @include page-title-font;
+}

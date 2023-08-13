@@ -10,11 +10,7 @@
 }
 
 .catalog__title {
-  @include Oswald-font;
-  color: #000000;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 36px;
+  @include page-title-font;
   margin-top: 27px;
   margin-bottom: 41px;
 }
