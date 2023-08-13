@@ -20,6 +20,7 @@
 .catalog-card__title {
   grid-area: title;
   width: 76px;
+
   @include catalog-card-title-font;
 }
 
