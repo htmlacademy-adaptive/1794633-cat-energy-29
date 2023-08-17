@@ -1,3 +1,11 @@
+.form__row-wrapper {
+  display: flex;
+
+  &:not(:last-of-type) {
+    margin-bottom: 14px;
+  }
+}
+
 .form__general-properties {
   padding-bottom: 24px;
   border-bottom: 1px solid #d9d9d9;
