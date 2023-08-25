@@ -1,4 +1,4 @@
-@import "../mixins";
+@use "../global/fonts";
 
 .hero {
   position: relative;
@@ -26,15 +26,10 @@
 }
 
 .hero__title {
-  @include page-title-font(#ffffff);
+  @include fonts.set-font(oswald, #ffffff, 36px, 36px);
   margin: 0 0 25px 0;
 }
 
 .hero__slogan {
-  @include Oswald-font;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 14px;
-  text-transform: uppercase;
+  @include fonts.set-font(oswald, #ffffff, 14px, 14px, uppercase);
 }

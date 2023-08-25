@@ -1,0 +1,15 @@
+.main-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 20px 14px 20px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.main-header__logo-link {
+  display: inline-block;
+}
+
+.main-header__logo-image {
+  display: block;
+}

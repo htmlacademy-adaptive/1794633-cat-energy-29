@@ -1,5 +1,5 @@
-@import "../mixins";
-@import "catalog";
+@use "../global/fonts";
+@use "catalog";
 
 .catalog-card {
   display: grid;
@@ -21,7 +21,7 @@
   grid-area: title;
   width: 76px;
 
-  @include catalog-card-title-font;
+  @include catalog.catalog-card-title-font;
 }
 
 .catalog-card__image {
@@ -32,11 +32,8 @@
 
 .catalog-card__specifications {
   grid-area: specifications;
-  color: #444444;
+  @include fonts.set-font(lato, #444444, 12px, 16px);
   text-align: center;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
 }
 
 .catalog-card__specifications-row {

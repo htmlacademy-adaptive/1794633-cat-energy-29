@@ -1,20 +1,16 @@
-@import "../mixins";
+@use "../global/fonts";
+@use "../global/list";
 
 @mixin catalog-card-title-font {
-  @include Oswald-font;
-  color: #222222;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  text-transform: uppercase;
+  @include fonts.set-font(oswald, #222222, 16px, 20px, uppercase);
 }
 
 .catalog__title {
-  @include page-title-font;
+  @include fonts.set-font(oswald, #000000, 36px, 36px);
   margin-top: 27px;
   margin-bottom: 41px;
 }
 
 .catalog__list {
-  @include reset-list-styles;
+  @include list.reset;
 }

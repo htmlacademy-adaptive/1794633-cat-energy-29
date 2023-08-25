@@ -1,4 +1,4 @@
-@import "catalog";
+@use "catalog";
 
 .catalog-additional-item {
   padding-top: 13px;
@@ -11,7 +11,7 @@
 }
 
 .catalog-additional-item__title {
-  @include catalog-card-title-font;
+  @include catalog.catalog-card-title-font;
   margin-top: 0;
   margin-bottom: 13px;
 }

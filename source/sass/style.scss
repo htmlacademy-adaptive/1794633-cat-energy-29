@@ -1,40 +1,45 @@
-@import "blocks/fonts";
-@import "blocks/index-page";
-@import "blocks/index-main";
-@import "blocks/catalog-page";
-@import "blocks/form-page";
-@import "blocks/main-header";
-@import "blocks/inner-container";
-@import "blocks/main-nav";
-@import "blocks/main-footer";
-@import "blocks/page-container";
-@import "blocks/button";
-@import "blocks/catalog-main";
-@import "blocks/catalog";
-@import "blocks/catalog-additional";
-@import "blocks/catalog-additional-item";
-@import "blocks/catalog-card";
-@import "blocks/comments";
-@import "blocks/contacts";
-@import "blocks/example";
-@import "blocks/features";
-@import "blocks/fieldset";
-@import "blocks/form";
-@import "blocks/general-properties";
-@import "blocks/gift";
-@import "blocks/hero";
-@import "blocks/owner-contacts";
-@import "blocks/program";
-@import "blocks/program-card";
-@import "blocks/program-type";
-@import "blocks/programs";
-@import "blocks/results";
-@import "blocks/social-list";
-@import "blocks/copyright";
-@import "blocks/link";
-@import "mixins";
+@use "blocks/additional";
+@use "blocks/catalog";
+@use "blocks/catalog-additional";
+@use "blocks/catalog-additional-item";
+@use "blocks/catalog-card";
+@use "blocks/catalog-main";
+@use "blocks/catalog-page";
+@use "blocks/comments";
+@use "blocks/contacts";
+@use "blocks/copyright";
+@use "blocks/example";
+@use "blocks/features";
+@use "blocks/form";
+@use "blocks/form-main";
+@use "blocks/form-page";
+@use "blocks/general-properties";
+@use "blocks/gift";
+@use "blocks/hero";
+@use "blocks/index-main";
+@use "blocks/index-page";
+@use "blocks/inner-container";
+@use "blocks/main-footer";
+@use "blocks/main-header";
+@use "blocks/main-nav";
+@use "blocks/owner-contacts";
+@use "blocks/page-container";
+@use "blocks/program";
+@use "blocks/program-card";
+@use "blocks/program-type";
+@use "blocks/programs";
+@use "blocks/results";
+@use "blocks/social-list";
+@use "global/button";
+@use "global/fieldset";
+@use "global/fonts";
+@use "global/link";
+@use "global/label";
+@use "global/variables";
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -50,10 +55,7 @@
 }
 
 body {
-  font-family: "Lato", "Arial", "Helvetica", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  color: #444444;
+  @include fonts.set-font(lato, #444444, 14px, 18px);
   background-color: #ffffff;
   margin: 0;
   padding: 0;

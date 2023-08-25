@@ -1,0 +1,61 @@
+@use "../global/fonts";
+
+.additional {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  padding-top: 43px;
+  padding-bottom: 34px;
+}
+
+.additional__title {
+  @include fonts.set-font(oswald, #000000, 24px, 26px);
+  width: calc(141px + 40px);
+  position: absolute;
+  display: inline-block;
+  top: -20px;
+  left: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #ffffff;
+}
+
+.additional__item {
+  cursor: pointer;
+}
+
+.additional__text {
+  @include fonts.set-font(oswald, #444444, 16px, 18px, uppercase);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+  }
+
+  &::after {
+    content: "";
+    background-image: url("../img/tick.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 18px;
+    height: 14px;
+    border-radius: 50%;
+    position: absolute;
+    left: 8.5px;
+    display: none;
+  }
+}
+
+.additional__input:checked + .additional__text {
+  &::after {
+    display: block;
+  }
+}

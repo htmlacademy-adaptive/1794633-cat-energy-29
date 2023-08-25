@@ -1,7 +1,7 @@
-@import "../mixins";
+@use "../global/list";
 
 .social-list {
-  @include reset-list-styles;
+  @include list.reset;
   display: flex;
   flex-wrap: wrap;
   gap: 24px;

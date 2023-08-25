@@ -1,3 +1,6 @@
+@use "../global/fonts";
+@use "../global/link";
+
 .copyright {
   display: flex;
   justify-content: space-between;
@@ -5,14 +8,13 @@
 }
 
 .copyright__title {
-  color: #444444;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
+  @include fonts.set-font(lato, #444444, 16px, 20px);
   margin: 0;
 }
 
 .copyright__title-link {
+  @include link.reset();
+  color: #444444;
   padding-top: 7px;
   padding-bottom: 7px;
 }

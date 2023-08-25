@@ -1,5 +1,47 @@
-@import "../mixins";
+@use "../global/fonts";
 
-.program-type__list {
-  @include reset-list-styles;
+.program-type {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding-top: 22px;
+  padding-bottom: 19px;
+}
+
+.program-type__item {
+  cursor: pointer;
+}
+
+.program-type__text {
+  @include fonts.set-font(oswald, #444444, 16px, 18px, uppercase);
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #cdcdcd;
+  }
+
+  &::after {
+    content: "";
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #68b738;
+    position: absolute;
+    left: 8.5px;
+    display: none;
+  }
+}
+
+.program-type__input:checked + .program-type__text {
+  &::after {
+    display: block;
+  }
 }

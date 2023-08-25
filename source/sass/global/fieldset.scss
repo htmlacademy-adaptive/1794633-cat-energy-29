@@ -1,6 +1,4 @@
-
-
-.fieldset {
+@mixin reset {
   border: none;
   padding: 0;
 }

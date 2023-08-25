@@ -1,4 +1,4 @@
-@import "../mixins";
+@use "../global/fonts";
 
 .example {
   background-color: #eaeaea;
@@ -7,31 +7,18 @@
 }
 
 .example__title {
-  @include Oswald-font;
+  @include fonts.set-font(oswald, #000000, 36px, 40px);
   margin-top: 0;
   margin-bottom: 40px;
-  color: #000000;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 40px;
 }
 
 .example__description {
-  color: #444444;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
+  @include fonts.set-font(lato, #444444, 14px, 18px);
   margin-bottom: 20px;
 }
 
 .example__result-price {
-  @include Oswald-font;
-  color: #000000;
+  @include fonts.set-font(oswald, #000000, 14px, 20px, uppercase);
   text-align: center;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  text-transform: uppercase;
   margin-bottom: 20px;
 }

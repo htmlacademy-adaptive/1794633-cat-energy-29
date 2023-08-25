@@ -1,5 +1,5 @@
-@import "../mixins";
+@use "../global/list";
 
 .programs__list {
-  @include reset-list-styles;
+  @include list.reset;
 }

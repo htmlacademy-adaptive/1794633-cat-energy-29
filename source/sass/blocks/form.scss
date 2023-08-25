@@ -1,12 +1,31 @@
-.form__row-wrapper {
-  display: flex;
+@use "../global/fieldset";
+@use "../global/fonts";
 
-  &:not(:last-of-type) {
-    margin-bottom: 14px;
-  }
+.form__general-properties,
+.form__program-type {
+  @include fieldset.reset();
+  border-bottom: 1px solid #d9d9d9;
 }
 
-.form__general-properties {
-  padding-bottom: 24px;
-  border-bottom: 1px solid #d9d9d9;
+.form__owner-contacts {
+  @include fieldset.reset();
+  margin-top: 44px;
+  border-top: 2px solid #68b738;
+}
+
+.form__comments {
+  @include fieldset.reset();
+  border-top: 2px solid #68b738;
+}
+
+.form__additional {
+  @include fieldset.reset();
+  border-top: 2px solid #68b738;
+}
+
+.form__required-fields-note {
+  @include fonts.set-font(lato, #000000, 14px, 16px);
+  text-align: center;
+  margin-top: 21px;
+  margin-bottom: 32px;
 }

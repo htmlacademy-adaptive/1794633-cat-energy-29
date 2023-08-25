@@ -1,0 +1,40 @@
+@use "../global/fonts";
+@use "../global/input";
+
+.owner-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  padding-top: 69px;
+  padding-bottom: 41px;
+}
+
+.owner-contacts__title {
+  @include fonts.set-font(oswald, #000000, 24px, 26px);
+  width: calc(187px + 40px);
+  position: absolute;
+  display: inline-block;
+  top: -20px;
+  left: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #ffffff;
+}
+
+.owner-contacts__item {
+  display: flex;
+  cursor: pointer;
+}
+
+.owner-contacts__text {
+  @include fonts.set-font(oswald, #444444, 16px, 18px, uppercase);
+  padding-right: 13px;
+  align-self: center;
+}
+
+.owner-contacts__input {
+  @include fonts.set-font(oswald, #444444, 16px, 18px, uppercase);
+  @include input.reset();
+  flex-grow: 1;
+}
