@@ -1,5 +1,15 @@
+@use "../global/variables";
+
 .inner-container {
-  width: 280px;
+  width: calc(variables.$mobile-screen - 40px);
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: variables.$tablet-screen) {
+    width: calc(variables.$tablet-screen - 60px);
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    width: calc(variables.$desktop-screen - 220px);
+  }
 }
