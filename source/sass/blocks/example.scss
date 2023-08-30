@@ -1,9 +1,19 @@
 @use "../global/fonts";
+@use "../global/variables";
 
 .example {
   background-color: #eaeaea;
   padding-top: 25px;
   padding-bottom: 40px;
+
+  @media (min-width: variables.$tablet-screen) {
+    background-color: #ffffff;
+    background-image: linear-gradient(to bottom, #ffffff 618px, #eaeaea 618px);
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    background-image: linear-gradient(#ffffff 191px, #eaeaea 191px);
+  }
 }
 
 .example__title {
@@ -17,8 +27,33 @@
   margin-bottom: 20px;
 }
 
-.example__result-price {
+.example__results-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: variables.$tablet-screen) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    flex-direction: column;
+  }
+}
+
+.example__costs {
   @include fonts.set-font(oswald, #000000, 14px, 20px, uppercase);
   text-align: center;
   margin-bottom: 20px;
+
+  @media (min-width: variables.$tablet-screen) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    display: block;
+  }
 }

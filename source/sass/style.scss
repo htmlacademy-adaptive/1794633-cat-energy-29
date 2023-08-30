@@ -9,6 +9,7 @@
 @use "blocks/contacts";
 @use "blocks/copyright";
 @use "blocks/example";
+@use "blocks/example-slider";
 @use "blocks/features";
 @use "blocks/form";
 @use "blocks/form-main";
@@ -21,7 +22,7 @@
 @use "blocks/inner-container";
 @use "blocks/main-footer";
 @use "blocks/main-header";
-@use "blocks/main-nav";
+@use "blocks/main-menu";
 @use "blocks/owner-contacts";
 @use "blocks/page-container";
 @use "blocks/program";
@@ -34,7 +35,9 @@
 @use "global/fieldset";
 @use "global/fonts";
 @use "global/link";
+@use "global/title";
 @use "global/variables";
+
 
 *,
 *::before,

@@ -3,39 +3,43 @@
   <head>
     <meta charset="UTF-8">
     <title>HTML Academy: Кэт энерджи. Подбор программы.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
   </head>
   <body class="form-page page-container">
-    <header class="main-header">
+  <header class="main-header inner-container">
+    <nav class="main-header__nav">
       <div class="main-header__wrapper">
         <a class="main-header__logo-link" href="">
           <img class="main-header__logo-image" src="img/logo-cat-mobile.svg" width="190" height="39"
-            alt="Логотип магазина Кэт энерджи.">
+               alt="Логотип магазина Кэт энерджи.">
         </a>
-        <button class="main-nav__toggle main-nav__toggle--closed" type="button"><span class="visually-hidden">Открыть меню</span>
+
+        <button class="main-header__toggle main-header__toggle--closed" type="button"><span class="visually-hidden">Открыть меню</span>
         </button>
       </div>
-      <nav class="main-header__nav main-nav">
-        <ul class="main-nav__list main-nav__list--closed">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">
-              Главная
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">
-              Каталог продукции
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active">
-              Подбор программы
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+
+      <ul class="main-header__menu main-header__menu--closed main-menu">
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="index.html">
+            Главная
+          </a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link" href="catalog.html">
+            Каталог продукции
+          </a>
+        </li>
+        <li class="main-menu__item">
+          <a class="main-menu__link main-menu__link--active">
+            Подбор программы
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
 
     <main class="form-main">
       <h1 class="visually-hidden">Подбор программы в магазине функционального питания для котов - "Кэт энерджи"</h1>

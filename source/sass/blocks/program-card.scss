@@ -1,22 +1,43 @@
 @use "../global/fonts";
+@use "../global/variables";
 
 .program-card {
   background-color: #f2f2f2;
-  padding-top: 24px;
-  padding-bottom: 22px;
-  margin-bottom: 20px;
+  padding: 24px 20px 22px 20px;
+
+  @media (min-width: variables.$tablet-screen) {
+    padding: 77px 315px 57px 52px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    padding-right: 61px;
+    padding-bottom: 59px;
+    width: 570px;
+  }
 }
 
 .program-card__title {
   @include fonts.set-font(oswald, #000000, 24px, 37px, uppercase);
   text-align: left;
   position: relative;
-  margin: 0 0 29px 90px;
+  margin: 0 0 29px 70px;
+  //display: flex;
 
   &::before {
     content: "";
     display: inline-block;
     position: absolute;
+  }
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #000000, 36px, 36px, uppercase);
+    margin-left: 0;
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    margin-left: 162px;
+    margin-bottom: 73px;
   }
 }
 
@@ -25,29 +46,69 @@
   width: 50px;
   height: 53px;
   left: -70px;
+
+  @media (min-width: variables.$tablet-screen) {
+    background: url("../img/cat-slim-tablet.svg");
+    width: 200px;
+    height: 211px;
+    left: 385px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    background: url("../img/cat-slim-desktop.svg");
+    width: 100px;
+    height: 106px;
+    left: -162px;
+    top: -33px;
+  }
 }
 
 .program-card__title--pro::before {
   background: url("../img/cat-pro.svg");
   width: 67px;
   height: 50px;
-  left: -80px;
+  left: -78px;
+
+  @media (min-width: variables.$tablet-screen) {
+    background: url("../img/cat-pro-tablet.svg");
+    width: 268px;
+    height: 200px;
+    left: 350px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    background: url("../img/cat-pro-desktop.svg");
+    width: 134px;
+    height: 100px;
+    left: -180px;
+    top: -28px;
+  }
 }
 
 .program-card__description {
   @include fonts.set-font(lato, #444444, 14px, 18px);
-  margin-left: 20px;
-  margin-right: 33px;
   margin-bottom: 38px;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(lato, #444444, 16px, 24px);
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    margin-bottom: 27px;
+  }
 }
 
 .program-card__catalog-link {
   @include fonts.set-font(oswald, #000000, 16px, 16px, uppercase);
-  text-align: center;
   text-decoration: none;
-  margin-left: 20px;
-  margin-right: 20px;
   position: relative;
+  display: inline-block;
+  max-width: 200px;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #000000, 20px, normal, uppercase);
+  }
 
   &::after {
     content: "";
@@ -69,5 +130,9 @@
     left: 0;
     top: -19px;
     z-index: 1;
+
+    @media (min-width: variables.$tablet-screen) {
+      content: none;
+    }
   }
 }
