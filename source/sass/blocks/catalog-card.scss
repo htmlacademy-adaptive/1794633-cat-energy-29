@@ -1,0 +1,74 @@
+@use "../global/fonts";
+@use "catalog";
+
+.catalog-card {
+  display: grid;
+  grid-template-areas:
+    "image title"
+    "image specifications"
+    "button button";
+  grid-template-columns: 1fr 1fr;
+  padding-top: 11px;
+  padding-bottom: 14px;
+  border-top: 1px solid #ebebeb;
+
+  &:last-of-type {
+    border-bottom: 1px solid #ebebeb;
+  }
+}
+
+.catalog-card__title {
+  grid-area: title;
+  width: 76px;
+
+  @include catalog.catalog-card-title-font;
+}
+
+.catalog-card__image {
+  grid-area: image;
+  align-self: center;
+  justify-self: center;
+}
+
+.catalog-card__specifications {
+  @include fonts.set-font(lato, #444444, 12px, 16px);
+  grid-area: specifications;
+  text-align: center;
+}
+
+.catalog-card__specifications-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-card__button {
+  grid-area: button;
+  margin-top: 13px;
+}
+
+.catalog-card--more {
+  display: block;
+}
+
+.catalog-card__title--more {
+  position: relative;
+  margin-top: 78px;
+  width: 100%;
+  text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-image: url("../img/plus-icon.svg");
+    top: -53px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.catalog-card__description {
+  text-align: center;
+}

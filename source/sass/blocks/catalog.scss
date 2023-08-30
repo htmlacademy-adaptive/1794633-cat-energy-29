@@ -1,0 +1,16 @@
+@use "../global/fonts";
+@use "../global/list";
+
+@mixin catalog-card-title-font {
+  @include fonts.set-font(oswald, #222222, 16px, 20px, uppercase);
+}
+
+.catalog__title {
+  @include fonts.set-font(oswald, #000000, 36px, 36px);
+  margin-top: 27px;
+  margin-bottom: 41px;
+}
+
+.catalog__list {
+  @include list.reset;
+}

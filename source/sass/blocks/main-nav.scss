@@ -1,0 +1,54 @@
+@use "../global/fonts";
+@use "../global/list";
+@use "../global/link";
+
+.main-nav__toggle {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &--closed {
+    background-image: url("../img/nav-open-button.svg");
+  }
+
+  &--opened {
+    background-image: url("../img/nav-close-button.svg");
+  }
+}
+
+.main-nav__list {
+  @include list.reset();
+  position: absolute;
+  z-index: 2;
+  background-color: #ffffff;
+  width: 320px;
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+  }
+}
+
+.main-nav__item {
+  text-align: center;
+
+  &:not(:first-child) {
+    border-top: 1px solid #e6e6e6;
+  }
+}
+
+.main-nav__link {
+  @include fonts.set-font(oswald, #000000, 20px, 20px, uppercase);
+  @include link.reset();
+
+  padding-top: 22px;
+  padding-bottom: 24px;
+}

@@ -1,0 +1,25 @@
+@use "catalog";
+
+.catalog-additional-item {
+  padding-top: 13px;
+  padding-bottom: 19px;
+  border-top: 1px solid #cdcdcd;
+
+  &:last-of-type {
+    border-bottom: 1px solid #cdcdcd;
+  }
+}
+
+.catalog-additional-item__title {
+  @include catalog.catalog-card-title-font;
+  margin-top: 0;
+  margin-bottom: 13px;
+}
+
+.catalog-additional-item__value {
+  float: right;
+}
+
+.catalog-additional-item__button {
+  margin-top: 15px;
+}

@@ -1,0 +1,13 @@
+@use "../global/fonts";
+
+.program__title {
+  @include fonts.set-font(oswald, #000000, 36px, 36px);
+  margin-bottom: 37px;
+}
+
+.program__description {
+  @include fonts.set-font(oswald, #000000, 14px, 18px, uppercase);
+  width: 226px;
+  margin-top: 0;
+  margin-bottom: 39px;
+}

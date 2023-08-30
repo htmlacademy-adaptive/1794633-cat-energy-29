@@ -1,0 +1,15 @@
+@use "../global/list";
+@use "../global/fonts";
+
+.catalog-additional {
+  padding-top: 25px;
+}
+
+.catalog-additional__title {
+  @include fonts.set-font(oswald, #000000, 24px, 24px, uppercase);
+  margin-bottom: 36px;
+}
+
+.catalog-additional__list {
+  @include list.reset;
+}

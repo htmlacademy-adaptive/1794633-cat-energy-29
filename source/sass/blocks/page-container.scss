@@ -1,0 +1,14 @@
+@use "../global/variables";
+
+.page-container {
+  width: variables.$mobile-screen;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-screen) {
+    width: variables.$tablet-screen;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    width: variables.$desktop-screen;
+  }
+}

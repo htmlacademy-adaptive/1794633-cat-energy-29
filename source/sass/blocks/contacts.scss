@@ -1,0 +1,24 @@
+@use "../global/fonts";
+
+.contacts--secondary {
+  background-color: #f2f2f2;
+}
+
+.contacts__title {
+  @include fonts.set-font(oswald, #111111, 16px, 20px, uppercase);
+  min-width: 140px;
+}
+
+.contacts__description {
+  @include fonts.set-font(lato, #444444, 14px, 20px);
+}
+
+.contacts__text {
+  padding-top: 26px;
+  padding-bottom: 26px;
+  display: flex;
+}
+
+.contacts__location {
+  display: block;
+}

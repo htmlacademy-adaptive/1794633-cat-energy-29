@@ -1,0 +1,24 @@
+@use "../global/fonts";
+
+.example {
+  background-color: #eaeaea;
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+.example__title {
+  @include fonts.set-font(oswald, #000000, 36px, 40px);
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.example__description {
+  @include fonts.set-font(lato, #444444, 14px, 18px);
+  margin-bottom: 20px;
+}
+
+.example__result-price {
+  @include fonts.set-font(oswald, #000000, 14px, 20px, uppercase);
+  text-align: center;
+  margin-bottom: 20px;
+}

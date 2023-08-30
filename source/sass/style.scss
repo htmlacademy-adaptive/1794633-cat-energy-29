@@ -1,1 +1,62 @@
-// Начните писать стили здесь
+@use "blocks/additional";
+@use "blocks/catalog";
+@use "blocks/catalog-additional";
+@use "blocks/catalog-additional-item";
+@use "blocks/catalog-card";
+@use "blocks/catalog-main";
+@use "blocks/catalog-page";
+@use "blocks/comments";
+@use "blocks/contacts";
+@use "blocks/copyright";
+@use "blocks/example";
+@use "blocks/features";
+@use "blocks/form";
+@use "blocks/form-main";
+@use "blocks/form-page";
+@use "blocks/general-properties";
+@use "blocks/gift";
+@use "blocks/hero";
+@use "blocks/index-main";
+@use "blocks/index-page";
+@use "blocks/inner-container";
+@use "blocks/main-footer";
+@use "blocks/main-header";
+@use "blocks/main-nav";
+@use "blocks/owner-contacts";
+@use "blocks/page-container";
+@use "blocks/program";
+@use "blocks/program-card";
+@use "blocks/program-type";
+@use "blocks/programs";
+@use "blocks/results";
+@use "blocks/social-list";
+@use "global/button";
+@use "global/fieldset";
+@use "global/fonts";
+@use "global/link";
+@use "global/variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+body {
+  @include fonts.set-font(lato, #444444, 14px, 18px);
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}

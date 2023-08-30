@@ -1,0 +1,26 @@
+@use "../global/fonts";
+@use "../global/input";
+
+.general-properties {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-bottom: 24px;
+}
+
+.general-properties__item {
+  display: flex;
+  cursor: pointer;
+}
+
+.general-properties__text {
+  @include fonts.set-font(oswald, #444444, 16px, 18px, uppercase);
+  padding-right: 13px;
+  align-self: center;
+}
+
+.general-properties__input {
+  @include fonts.set-font(oswald, #444444, 16px, 18px, uppercase);
+  @include input.reset();
+  flex-grow: 1;
+}

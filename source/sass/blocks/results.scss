@@ -1,0 +1,28 @@
+@use "../global/fonts";
+
+.results {
+  display: flex;
+  justify-content: space-between;
+}
+
+.results__item {
+  width: 124px;
+  margin-bottom: 20px;
+}
+
+.results__number {
+  @include fonts.set-font(oswald, #000000, 24px, 24px);
+  text-align: center;
+  background-image: url("../img/example-property-back.svg");
+  min-height: 56px;
+  padding-top: 14.5px;
+}
+
+.results__description {
+  @include fonts.set-font(lato, #444444, 12px, 12px);
+  text-align: center;
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -10px;
+}
