@@ -1,0 +1,24 @@
+@use "../global/fonts";
+@use "../global/variables";
+
+.location {
+
+}
+
+.location__wrapper {
+  @media (min-width: variables.$desktop-screen) {
+    position: relative;
+  }
+}
+
+.location__map {
+  display: block;
+  width: 100%;
+  height: 362px;
+  object-fit: cover;
+
+  @media (min-width: variables.$tablet-screen) {
+    height: 400px;
+    object-fit: cover;
+  }
+}

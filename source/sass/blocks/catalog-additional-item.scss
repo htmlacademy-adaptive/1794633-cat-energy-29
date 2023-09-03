@@ -1,4 +1,4 @@
-@use "catalog";
+@use "../global/fonts";
 
 .catalog-additional-item {
   padding-top: 13px;
@@ -11,7 +11,7 @@
 }
 
 .catalog-additional-item__title {
-  @include catalog.catalog-card-title-font;
+  @include fonts.set-font(oswald, #222222, 16px, 20px, uppercase);
   margin-top: 0;
   margin-bottom: 13px;
 }

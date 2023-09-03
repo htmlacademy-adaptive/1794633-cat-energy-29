@@ -22,6 +22,10 @@
   @include fonts.set-font(oswald, #000000, 36px, 40px);
   @include title.reset();
   margin-bottom: 40px;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #000000, 60px, 100%);
+  }
 }
 
 .features__list {

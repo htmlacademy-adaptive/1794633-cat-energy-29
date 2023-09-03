@@ -6,14 +6,22 @@
 .main-menu{
   @include list.reset();
   width: 320px;
+  background-color: #ffffff;
 
   @media (min-width: variables.$tablet-screen) {
     display: flex;
     gap: 33px;
     width: auto;
     min-width: 436px;
+    background-color: inherit;
   }
 
+  @media (min-width: variables.$desktop-screen) {
+    position: relative;
+  }
+}
+
+.index-page .main-menu {
   @media (min-width: variables.$desktop-screen) {
     position: relative;
 
@@ -53,9 +61,11 @@
   }
 
   @media (min-width: variables.$desktop-screen) {
-    @include fonts.set-font(oswald, #ffffff, 18px, normal, uppercase);
+    @include fonts.set-font(oswald, #000000, 18px, normal, uppercase);
     padding: 0;
   }
+}
 
-
+.index-page .main-menu__link {
+  color: #ffffff;
 }

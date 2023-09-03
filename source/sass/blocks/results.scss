@@ -34,8 +34,7 @@
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-screen) {
-    font-size: 30px;
-    line-height: 37px;
+    @include fonts.set-font(oswald, #000000, 30px, 37px);
   }
 }
 
@@ -50,8 +49,7 @@
   bottom: -13px;
 
   @media (min-width: variables.$tablet-screen) {
-    font-size: 14px;
-    line-height: 14px;
+    @include fonts.set-font(lato, #444444, 14px, 100%);
     white-space: nowrap;
     width: max-content;
     bottom: -6px;

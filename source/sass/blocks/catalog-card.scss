@@ -1,49 +1,133 @@
 @use "../global/fonts";
-@use "catalog";
+@use "../global/variables";
+@use "../global/link";
 
 .catalog-card {
-  display: grid;
-  grid-template-areas:
-    "image title"
-    "image specifications"
-    "button button";
-  grid-template-columns: 1fr 1fr;
-  padding-top: 11px;
-  padding-bottom: 14px;
   border-top: 1px solid #ebebeb;
+  padding-top: 19px;
+  padding-bottom: 14px;
 
   &:last-of-type {
     border-bottom: 1px solid #ebebeb;
+
+    @media (min-width: variables.$tablet-screen) {
+      border-bottom: none;
+      min-height: 511px;
+    }
+  }
+
+  @media (min-width: variables.$tablet-screen) {
+    display: flex;
+    flex-direction: column;
+    width: 324px;
+    padding: 8px 37px 39px 39px;
+    background-image: linear-gradient(to bottom, #ffffff 81px, #f2f2f2 81px);
+    border-top: none;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    width: 245px;
+  }
+}
+
+.catalog-card__content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 13px;
+
+  @media (min-width: variables.$tablet-screen) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+    flex-grow: 1;
+    padding-bottom: 33px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+
   }
 }
 
 .catalog-card__title {
-  grid-area: title;
+  @include fonts.set-font(oswald, #222222, 16px, 20px, uppercase);
+  margin: 0;
   width: 76px;
 
-  @include catalog.catalog-card-title-font;
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #222222, 20px, 24px, uppercase);
+    text-align: center;
+    margin: 0 auto;
+    width: 159px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    @include fonts.set-font(oswald, #222222, 20px, 21px, uppercase);
+  }
+}
+
+.catalog-card__title-link {
+  @include link.reset();
+  margin: 0 auto 14px;
+  display: block;
+
+}
+
+.catalog-card__image-link {
+  margin: auto auto;
+
+  @media (min-width: variables.$tablet-screen) {
+    //padding-top: 28px;
+    width: 200px;
+    height: 210px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    width: 172px;
+  }
 }
 
 .catalog-card__image {
-  grid-area: image;
-  align-self: center;
-  justify-self: center;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.catalog-card__description-wrapper {
+  @media (min-width: variables.$tablet-screen) {
+    width: 100%;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+
+  }
 }
 
 .catalog-card__specifications {
   @include fonts.set-font(lato, #444444, 12px, 16px);
-  grid-area: specifications;
-  text-align: center;
+  width: 100%;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(lato, #444444, 16px, 16px);
+  }
 }
 
 .catalog-card__specifications-row {
   display: flex;
   justify-content: space-between;
-}
+  align-items: center;
+  min-width: 140px;
 
-.catalog-card__button {
-  grid-area: button;
-  margin-top: 13px;
+  @media (min-width: variables.$tablet-screen) {
+    border-bottom: 1px solid #cdcdcd;
+    padding: 5px 0;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    max-width: 169px;
+    border-bottom: 1px solid #cdcdcd;
+    padding: 5px 0;
+  }
 }
 
 .catalog-card--more {
@@ -69,6 +153,8 @@
   }
 }
 
-.catalog-card__description {
-  text-align: center;
+.catalog-card__button {
+  @media (min-width: variables.$desktop-screen) {
+    width: 100%;
+  }
 }

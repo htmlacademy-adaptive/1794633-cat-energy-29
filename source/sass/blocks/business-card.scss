@@ -1,0 +1,47 @@
+@use "../global/fonts";
+@use "../global/variables";
+
+.business-card {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  align-items: center;
+
+  @media (min-width: variables.$desktop-screen) {
+    width: 565px;
+    position: absolute;
+    top: 95px;
+    background-color: #ffffff;
+    padding: 60px 78px 60px 80px;
+  }
+
+}
+
+.business-card__title {
+  @include fonts.set-font(oswald, #111111, 16px, 20px, uppercase);
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #111111, 20px, 26px, uppercase);
+    width: 163px;
+  }
+}
+
+.business-card__street {
+  @include fonts.set-font(lato, #444444, 14px, 20px);
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(lato, #444444, 16px, 20px);
+    display: inline-block;
+    width: 157px;
+    text-align: right;
+  }
+}
+
+.business-card__city {
+  @media (min-width: variables.$tablet-screen) {
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+}

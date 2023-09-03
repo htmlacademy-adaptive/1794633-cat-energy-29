@@ -1,9 +1,6 @@
 @use "../global/fonts";
 @use "../global/list";
-
-@mixin catalog-card-title-font {
-  @include fonts.set-font(oswald, #222222, 16px, 20px, uppercase);
-}
+@use "../global/variables";
 
 .catalog__title {
   @include fonts.set-font(oswald, #000000, 36px, 36px);
@@ -13,4 +10,15 @@
 
 .catalog__list {
   @include list.reset;
+
+  @media (min-width: variables.$tablet-screen) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 60px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+
+  }
 }
