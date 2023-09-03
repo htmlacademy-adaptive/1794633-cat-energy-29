@@ -11,15 +11,15 @@
   display: block;
   border: none;
 
+  @media (min-width: variables.$tablet-screen) {
+    width: 244px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
   &--primary {
     background-color: #68b738;
     color: #ffffff;
-
-    @media (min-width: variables.$tablet-screen) {
-      width: 244px;
-      padding-top: 14px;
-      padding-bottom: 14px;
-    }
   }
 
   &--secondary {
