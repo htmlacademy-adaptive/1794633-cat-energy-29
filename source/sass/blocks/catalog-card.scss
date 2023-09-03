@@ -21,13 +21,38 @@
     flex-direction: column;
     width: 324px;
     padding: 8px 37px 39px 39px;
-    background-image: linear-gradient(to bottom, #ffffff 81px, #f2f2f2 81px);
     border-top: none;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 100%;
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: 81px;
+      bottom: 0;
+      left: 0;
+    }
+
+    &:not(:last-of-type) {
+      &::before {
+        background-color: #f2f2f2;
+      }
+    }
+
+    &:last-of-type {
+      &::before {
+        border: 2px solid #f2f2f2;
+      }
+    }
   }
 
   @media (min-width: variables.$desktop-screen) {
     width: 245px;
   }
+
+
 }
 
 .catalog-card--more {
@@ -53,45 +78,44 @@
   @media (min-width: variables.$desktop-screen) {
 
   }
-}
 
-.catalog-card__content-wrapper--more {
-  display: block;
-  position: relative;
-  margin-top: 78px;
-  width: 100%;
-  text-align: center;
-
-  &::before {
-    content: "";
-    position: absolute;
+  &--more {
     display: block;
-    background-image: url("../img/plus-icon.svg");
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30px;
-    height: 30px;
+    position: relative;
+    margin-top: 78px;
+    width: 100%;
+    text-align: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      background-image: url("../img/plus-icon.svg");
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 30px;
+
+      @media (min-width: variables.$tablet-screen) {
+        transform: scale(2) translateX(-25%);
+        top: -110px;
+      }
+
+      @media (min-width: variables.$desktop-screen) {
+        top: -130px;
+      }
+    }
 
     @media (min-width: variables.$tablet-screen) {
-      transform: scale(2) translateX(-25%);
-      top: -110px;
+      margin-top: 248px;
     }
 
     @media (min-width: variables.$desktop-screen) {
-      top: -130px;
+      margin-top: 240px;
     }
   }
-
-  @media (min-width: variables.$tablet-screen) {
-    margin-top: 248px;
-  }
-
-  @media (min-width: variables.$desktop-screen) {
-    margin-top: 240px;
-  }
 }
-
 .catalog-card__title {
   @include fonts.set-font(oswald, #222222, 16px, 20px, uppercase);
   margin: 0;
@@ -107,10 +131,10 @@
   @media (min-width: variables.$desktop-screen) {
     @include fonts.set-font(oswald, #222222, 20px, 21px, uppercase);
   }
-}
 
-.catalog-card__title--more {
-  width: auto;
+  &--more {
+    width: auto;
+  }
 }
 
 .catalog-card__title-link {
@@ -124,9 +148,8 @@
   margin: auto auto;
 
   @media (min-width: variables.$tablet-screen) {
-    //padding-top: 28px;
     width: 200px;
-    height: 210px;
+    height: 242px;
   }
 
   @media (min-width: variables.$desktop-screen) {
@@ -175,10 +198,6 @@
     border-bottom: 1px solid #cdcdcd;
     padding: 5px 0;
   }
-}
-
-.catalog-card--more {
-
 }
 
 .catalog-card__button {
