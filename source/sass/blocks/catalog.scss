@@ -6,6 +6,17 @@
   @include fonts.set-font(oswald, #000000, 36px, 36px);
   margin-top: 27px;
   margin-bottom: 41px;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #000000, 60px, 60px);
+    margin-top: 66px;
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    margin-top: 75px;
+    margin-bottom: 85px;
+  }
 }
 
 .catalog__list {

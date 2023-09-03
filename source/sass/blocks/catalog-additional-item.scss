@@ -1,4 +1,5 @@
 @use "../global/fonts";
+@use "../global/variables";
 
 .catalog-additional-item {
   padding-top: 13px;
@@ -8,18 +9,58 @@
   &:last-of-type {
     border-bottom: 1px solid #cdcdcd;
   }
+
+  display: grid;
+  grid-template-areas:
+    "title"
+    "description"
+    "button";
+  grid-template-columns: 1fr;
+
+  @media (min-width: variables.$tablet-screen) {
+    grid-template-areas:
+      "title description"
+      "button button";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    grid-template-areas:
+      "title description button";
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
 }
 
 .catalog-additional-item__title {
   @include fonts.set-font(oswald, #222222, 16px, 20px, uppercase);
+  grid-area: title;
   margin-top: 0;
   margin-bottom: 13px;
 }
 
+.catalog-additional-item__property {
+
+}
 .catalog-additional-item__value {
   float: right;
 }
 
+.catalog-additional-item__description {
+  grid-area: description;
+}
+
 .catalog-additional-item__button {
+  grid-area: button;
   margin-top: 15px;
+
+  @media (min-width: variables.$tablet-screen) {
+    width: 100%;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    width: 244px;
+    margin-right: 0;
+    margin-left: auto;
+  }
 }

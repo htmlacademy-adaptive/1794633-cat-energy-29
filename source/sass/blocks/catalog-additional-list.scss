@@ -1,0 +1,7 @@
+@use "../global/variables";
+
+.catalog-additional-list {
+  @media (min-width: variables.$desktop-screen) {
+    flex-grow: 1;
+  }
+}

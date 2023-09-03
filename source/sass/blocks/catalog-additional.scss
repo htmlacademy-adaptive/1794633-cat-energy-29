@@ -1,15 +1,47 @@
 @use "../global/list";
 @use "../global/fonts";
+@use "../global/variables";
 
 .catalog-additional {
   padding-top: 25px;
 }
 
 .catalog-additional__title {
-  @include fonts.set-font(oswald, #000000, 24px, 24px, uppercase);
   margin-bottom: 36px;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100vw;
+    height: 2px;
+    background-color: #68b738;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+}
+
+.catalog-additional__title-text {
+  @include fonts.set-font(oswald, #000000, 24px, 24px);
+  background-color: #ffffff;
+  padding-right: 10px;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #000000, 36px, 36px);
+    padding: 0 40px;
+  }
 }
 
 .catalog-additional__list {
   @include list.reset;
+}
+
+.catalog-additional__wrapper {
+  @media (min-width: variables.$desktop-screen) {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+  }
 }
