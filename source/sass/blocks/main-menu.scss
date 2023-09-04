@@ -67,5 +67,7 @@
 }
 
 .index-page .main-menu__link {
-  color: #ffffff;
+  @media (min-width: variables.$desktop-screen) {
+    color: #ffffff;
+  }
 }

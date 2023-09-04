@@ -1,5 +1,12 @@
 @use "../global/fieldset";
 @use "../global/fonts";
+@use "../global/variables";
+
+.form__properties-and-program-wrapper {
+  @media (min-width: variables.$desktop-screen) {
+    display: flex;
+  }
+}
 
 .form__general-properties,
 .form__program-type {

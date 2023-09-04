@@ -12,8 +12,13 @@
       <nav class="main-header__nav">
         <div class="main-header__wrapper">
           <a class="main-header__logo-link" href="">
-            <img class="main-header__logo-image" src="img/logo-cat-mobile.svg" width="190" height="39"
-                 alt="Логотип магазина Кэт энерджи.">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/header-logo/header-logo-desktop.svg" width="202"
+                height="59">
+              <source media="(min-width: 768px)" srcset="img/header-logo/header-logo-tablet.svg" width="174" height="50">
+              <img class="main-header__logo-image" src="img/header-logo/header-logo-mobile.svg" width="190" height="38"
+                alt="Логотип магазина питания для котов - Кэт энерджи.">
+            </picture>
           </a>
 
           <button class="main-header__toggle main-header__toggle--closed" type="button"><span class="visually-hidden">Открыть меню</span>
@@ -376,14 +381,11 @@
             </li>
           </ul>
 
-          <article class="catalog-additional__gift gift">
-            <div class="gift__wrapper">
-              <h2 class="visually-hidden">Подарок!</h2>
-              <div class="gift__container">
-                <p class="gift__description">Закажите все и&nbsp;получите чехол для кота в подарок!</p>
-              </div>
-            </div>
-          </article>
+          <section class="catalog-additional__gift gift">
+            <h3 class="visually-hidden">Подарок!</h3>
+            <p class="gift__description">
+              Закажите все и&nbsp;получите чехол для кота в подарок!</p>
+          </section>
         </div>
       </section>
     </main>
