@@ -1,6 +1,8 @@
 @use "../global/fonts";
+@use "../global/fieldset";
 
 .additional {
+  @include fieldset.reset();
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -11,14 +13,12 @@
 
 .additional__title {
   @include fonts.set-font(oswald, #000000, 24px, 26px);
-  width: calc(141px + 40px);
-  position: absolute;
+  //width: calc(141px + 40px);
+  position: relative;
   display: inline-block;
-  top: -20px;
-  left: -20px;
-  padding-left: 20px;
-  padding-right: 20px;
   background-color: #ffffff;
+
+
 }
 
 .additional__item {

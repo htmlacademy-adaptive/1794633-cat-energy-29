@@ -1,11 +1,23 @@
 @use "../global/fonts";
 @use "../global/input";
+@use "../global/fieldset";
+@use "../global/variables";
 
 .general-properties {
+  @include fieldset.reset();
   display: flex;
   flex-direction: column;
   gap: 14px;
-  padding-bottom: 24px;
+  margin-bottom: 24px;
+
+  @media (min-width: variables.$tablet-screen) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
 }
 
 .general-properties__item {
@@ -23,4 +35,9 @@
   @include fonts.set-font(oswald, #444444, 16px, 18px, uppercase);
   @include input.reset();
   flex-grow: 1;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #444444, 20px, normal, uppercase);
+    padding: 11px 20px;
+  }
 }
