@@ -1,8 +1,26 @@
 @use "../global/fonts";
+@use "../global/variables";
+@use "../global/header";
+
+.program {
+  @media (min-width: variables.$tablet-screen) {
+    padding-left: 40px;
+  }
+}
 
 .program__title {
   @include fonts.set-font(oswald, #000000, 36px, 36px);
+  @include header.reset();
   margin-bottom: 37px;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #000000, 60px, 60px);
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    margin-bottom: 56px;
+  }
 }
 
 .program__description {
@@ -10,4 +28,12 @@
   width: 226px;
   margin-top: 0;
   margin-bottom: 39px;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #000000, 20px, 30px, uppercase);
+    margin-left: 0;
+    margin-bottom: 66px;
+    width: 323px;
+  }
+
 }

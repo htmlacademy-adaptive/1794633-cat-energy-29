@@ -1,0 +1,13 @@
+//@use "../global/fonts";
+@use "../global/variables";
+
+.index-page {
+  @media (min-width: variables.$desktop-screen) {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
+      url("../../img/index-hero-cat-desktop.jpg"),
+    linear-gradient(rgb(76, 74, 79), rgb(76, 74, 79));
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 50% 694px, auto 694px, 50% 694px;
+  }
+}

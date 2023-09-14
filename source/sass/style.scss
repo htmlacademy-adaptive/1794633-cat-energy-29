@@ -1,15 +1,27 @@
+@use "blocks/inner-container";
+@use "blocks/page-container";
+@use "global/button";
+@use "global/fieldset";
+@use "global/fonts";
+@use "global/link";
+@use "global/title";
+@use "global/variables";
 @use "blocks/additional";
+@use "blocks/business-card";
 @use "blocks/catalog";
 @use "blocks/catalog-additional";
 @use "blocks/catalog-additional-item";
+@use "blocks/catalog-additional-list";
 @use "blocks/catalog-card";
 @use "blocks/catalog-main";
 @use "blocks/catalog-page";
 @use "blocks/comments";
-@use "blocks/contacts";
 @use "blocks/copyright";
+@use "blocks/dividing-title";
 @use "blocks/example";
+@use "blocks/example-slider";
 @use "blocks/features";
+@use "blocks/footer-links";
 @use "blocks/form";
 @use "blocks/form-main";
 @use "blocks/form-page";
@@ -18,23 +30,17 @@
 @use "blocks/hero";
 @use "blocks/index-main";
 @use "blocks/index-page";
-@use "blocks/inner-container";
+@use "blocks/location";
 @use "blocks/main-footer";
 @use "blocks/main-header";
-@use "blocks/main-nav";
+@use "blocks/main-menu";
 @use "blocks/owner-contacts";
-@use "blocks/page-container";
 @use "blocks/program";
 @use "blocks/program-card";
 @use "blocks/program-type";
 @use "blocks/programs";
 @use "blocks/results";
-@use "blocks/social-list";
-@use "global/button";
-@use "global/fieldset";
-@use "global/fonts";
-@use "global/link";
-@use "global/variables";
+@use "blocks/socials";
 
 *,
 *::before,

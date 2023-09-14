@@ -1,18 +1,37 @@
 @use "../global/fonts";
 @use "../global/variables";
 
-.hero__text-wrapper {
+.hero {
+  @media (min-width: variables.$tablet-screen) {
+
+  }
+}
+
+.hero__background-wrapper {
   text-align: center;
 
-  background:
+  background-image:
     linear-gradient(0deg, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)),
-    url("../img/index-hero-cat-mobile.jpg") no-repeat;
+    url("../img/index-hero-cat-mobile.jpg"),
+  linear-gradient(rgb(76, 74, 79), rgb(76, 74, 79));
+  background-repeat: no-repeat;
+  background-position: center;
   min-height: 302px;
   padding-top: 27px;
 
   @media (min-width: variables.$tablet-screen) {
     background: none;
     min-height: 201px;
+  }
+}
+
+.hero__text-wrapper {
+  @media (min-width: variables.$tablet-screen) {
+    padding-left: 90px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    padding-left: 79px;
   }
 }
 
@@ -24,7 +43,6 @@
     @include fonts.set-font(oswald, #000000, 60px, 60px);
     width: 416px;
     text-align: left;
-    margin-left: 120px;
     margin-bottom: 40px;
   }
 }
@@ -35,7 +53,10 @@
   @media (min-width: variables.$tablet-screen) {
     @include fonts.set-font(oswald, #000000, 20px, 20px);
     text-align: left;
-    margin-left: 120px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    margin-bottom: 52px;
   }
 }
 
@@ -45,12 +66,22 @@
 
   @media (min-width: variables.$tablet-screen) {
     height: 609px;
+    padding-left: 90px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    padding-left: 79px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    position: static;
+    height: auto;
   }
 
   &::before {
     content: "";
     position: absolute;
-    background-image: url("../img/index-can-mobile-1.png");
+    background-image: url("../img/index-can-mobile.png");
     bottom: 43px;
     left: 50%;
     transform: translateX(-50%);
@@ -58,11 +89,16 @@
     height: 270px;
 
     @media (min-width: variables.$tablet-screen) {
-      background-image: url("../img/index-can-tablet-1.png");
+      background-image: url("../img/index-can-tablet.png");
       top: 0;
+      left: 350px;
       width: 709px;
       height: 609px;
       z-index: -1;
+    }
+
+    @media (min-width: variables.$desktop-screen) {
+      content: none;
     }
   }
 }
@@ -76,8 +112,12 @@
   @media (min-width: variables.$tablet-screen) {
     bottom: auto;
     top: 29px;
-    left: 146px;
+    left: 90px;
     transform: none;
     width: 244px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    position: static;
   }
 }

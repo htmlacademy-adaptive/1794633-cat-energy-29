@@ -1,28 +1,28 @@
 @use "../global/fonts";
+@use "../global/fieldset";
+@use "../global/variables";
 
 .comments {
+  @include fieldset.reset();
   position: relative;
-  padding-top: 47px;
-  padding-bottom: 40px;
 }
 
 .comments__title {
-  @include fonts.set-font(oswald, #000000, 24px, 26px);
-  width: calc(121px + 40px);
-  position: absolute;
-  display: inline-block;
-  top: -20px;
-  left: -20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #ffffff;
+  //width: calc(121px + 20px);
+  margin-bottom: 38px;
+
+  @media (min-width: variables.$tablet-screen) {
+    margin-bottom: 87px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    margin-bottom: 76px;
+  }
 }
 
 .comments__input {
   @include fonts.set-font(oswald, #444444, 16px, 18px, uppercase);
   width: 100%;
   min-height: 150px;
-  padding-top: 14px;
-  padding-left: 15px;
-  padding-right: 14px;
+  padding: 14px 14px 14px 15px;
 }

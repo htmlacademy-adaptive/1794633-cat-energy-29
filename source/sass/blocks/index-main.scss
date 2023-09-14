@@ -1,7 +1,14 @@
+@use "../global/variables";
+
 .index-main__hero {
   margin-bottom: 20px;
+
+  @media (min-width: variables.$desktop-screen) {
+    min-height: 635px;
+    margin-top: 110px;
+  }
 }
 
 .index-main__features {
-  margin-bottom: 49px;
+  //margin-bottom: 49px;
 }

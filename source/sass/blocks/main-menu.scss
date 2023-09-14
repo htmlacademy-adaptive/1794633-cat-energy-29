@@ -1,0 +1,73 @@
+@use "../global/fonts";
+@use "../global/list";
+@use "../global/link";
+@use "../global/variables";
+
+.main-menu{
+  @include list.reset();
+  width: 320px;
+  background-color: #ffffff;
+
+  @media (min-width: variables.$tablet-screen) {
+    display: flex;
+    gap: 33px;
+    width: auto;
+    min-width: 436px;
+    background-color: inherit;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    position: relative;
+  }
+}
+
+.index-page .main-menu {
+  @media (min-width: variables.$desktop-screen) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/index-can-desktop.png");
+      top: 80px;
+      left: -42px;
+      transform: translateX(-50%);
+      width: 552px;
+      height: 499px;
+    }
+  }
+}
+
+.main-menu__item {
+  text-align: center;
+
+  &:not(:first-child) {
+    border-top: 1px solid #e6e6e6;
+
+    @media (min-width: variables.$tablet-screen) {
+      border-top: none;
+    }
+  }
+}
+
+.main-menu__link {
+  @include fonts.set-font(oswald, #000000, 20px, 20px, uppercase);
+  @include link.reset();
+  padding-top: 22px;
+  padding-bottom: 24px;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #000000, 18px, 24px, uppercase);
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    @include fonts.set-font(oswald, #000000, 18px, normal, uppercase);
+    padding: 0;
+  }
+}
+
+.index-page .main-menu__link {
+  @media (min-width: variables.$desktop-screen) {
+    color: #ffffff;
+  }
+}

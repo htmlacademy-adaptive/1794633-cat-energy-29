@@ -1,28 +1,64 @@
 @use "../global/fonts";
+@use "../global/variables";
 
 .results {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: variables.$tablet-screen) {
+    width: 366px;
+  }
 }
 
 .results__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
   width: 124px;
-  margin-bottom: 20px;
+  height: 56px;
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
+
+  @media (min-width: variables.$tablet-screen) {
+    width: 162px;
+    height: 77px;
+  }
 }
 
 .results__number {
   @include fonts.set-font(oswald, #000000, 24px, 24px);
   text-align: center;
-  background-image: url("../img/example-property-back.svg");
   min-height: 56px;
-  padding-top: 14.5px;
+  padding: 14.5px 0;
+  text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #000000, 30px, 37px);
+  }
 }
 
 .results__description {
-  @include fonts.set-font(lato, #444444, 12px, 12px);
+  @include fonts.set-font(lato, #444444, 12px, 100%);
   text-align: center;
-  width: 80px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -10px;
+  margin: 0;
+  width: 77px;
+  position: absolute;
+  z-index: 1;
+  background-color: #eaeaea;
+  bottom: -13px;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(lato, #444444, 14px, 100%);
+    white-space: nowrap;
+    width: max-content;
+    bottom: -6px;
+    padding: 0 5px;
+    background-color: #ffffff;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    background-color: #eaeaea;
+  }
+
 }

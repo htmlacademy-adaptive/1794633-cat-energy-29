@@ -5,21 +5,11 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  position: relative;
-  padding-top: 69px;
   padding-bottom: 41px;
 }
 
 .owner-contacts__title {
-  @include fonts.set-font(oswald, #000000, 24px, 26px);
-  width: calc(187px + 40px);
-  position: absolute;
-  display: inline-block;
-  top: -20px;
-  left: -20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #ffffff;
+  //width: calc(187px + 20px);
 }
 
 .owner-contacts__item {

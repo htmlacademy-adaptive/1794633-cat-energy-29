@@ -1,5 +1,18 @@
 @use "../global/list";
+@use "../global/variables";
 
 .programs__list {
   @include list.reset;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: variables.$tablet-screen) {
+    gap: 30px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    flex-direction: row;
+    gap: 80px;
+  }
 }

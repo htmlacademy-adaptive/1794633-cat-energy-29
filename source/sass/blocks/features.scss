@@ -1,22 +1,57 @@
 @use "../global/list";
 @use "../global/fonts";
+@use "../global/variables";
+@use "../global/title";
+
+.features {
+  padding-top: 20px;
+  padding-bottom: 49px;
+
+  @media (min-width: variables.$tablet-screen) {
+    padding-top: 45px;
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    padding-top: 71px;
+    padding-bottom: 69px;
+  }
+}
 
 .features__title {
   @include fonts.set-font(oswald, #000000, 36px, 40px);
+  @include title.reset();
   margin-bottom: 40px;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #000000, 60px, 100%);
+  }
 }
 
 .features__list {
   @include list.reset;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: variables.$tablet-screen) {
+    counter-reset: section 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 37px;
+    column-gap: 136px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    column-gap: 77px;
+  }
 }
 
 .features__item {
   @include fonts.set-font(lato, #444444, 14px, 18px);
   min-height: 60px;
   position: relative;
-  margin-left: 80px;
-  display: flex;
-  flex-wrap: wrap;
+  padding-left: 80px;
   align-content: center;
 
   &::before {
@@ -28,7 +63,42 @@
     background-position: center;
     width: 60px;
     height: 60px;
-    left: -80px;
+    left: 0px;
+
+    @media (min-width: variables.$tablet-screen) {
+      width: 80px;
+      height: 80px;
+      top: 41px;
+    }
+  }
+
+  &::after {
+    @media (min-width: variables.$tablet-screen) {
+      @include fonts.set-font(oswald, #f2f2f2, 280px, 280px);
+      counter-increment: section 1;
+      content: counter(section);
+      background: #ffffff;
+      display: inline-block;
+      text-align: right;
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      top: -4px;
+    }
+  }
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(lato, #444444, 16px, 24px);
+    width: 247px;
+    min-height: 280px;
+    flex-direction: column;
+    padding-top: 155px;
+    padding-left: 0;
+    //outline: #4c4a4f 1px dashed;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+
   }
 }
 
@@ -46,8 +116,4 @@
 
 .features__item--timer::before {
   background-image: url("../img/timer-icon.svg");
-}
-
-.features__item:not(:last-child) {
-  margin-bottom: 20px;
 }

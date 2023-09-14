@@ -1,24 +1,123 @@
 @use "../global/fonts";
+@use "../global/variables";
 
 .example {
   background-color: #eaeaea;
   padding-top: 25px;
   padding-bottom: 40px;
+
+  @media (min-width: variables.$tablet-screen) {
+    background-color: #ffffff;
+    background-image: linear-gradient(to bottom, #ffffff 618px, #eaeaea 618px);
+    padding-bottom: 101px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    background-image: linear-gradient(#ffffff 170px, #eaeaea 170px);
+    padding-bottom: 75px;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: variables.$desktop-screen) {
+    display: flex;
+    align-items: flex-start;
+  }
 }
 
 .example__title {
   @include fonts.set-font(oswald, #000000, 36px, 40px);
   margin-top: 0;
   margin-bottom: 40px;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #000000, 60px, 100%);
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    margin-bottom: 146px;
+  }
 }
 
 .example__description {
   @include fonts.set-font(lato, #444444, 14px, 18px);
   margin-bottom: 20px;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(lato, #444444, 16px, 24px);
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    margin-bottom: 69px;
+  }
 }
 
-.example__result-price {
+.example__results-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: variables.$tablet-screen) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 99px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+}
+
+.example__costs {
   @include fonts.set-font(oswald, #000000, 14px, 20px, uppercase);
   text-align: center;
+  margin-top: 20px;
   margin-bottom: 20px;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #000000, 20px, 20px, uppercase);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    display: block;
+    margin-top: 55px;
+  }
+}
+
+.example__costs-value {
+
+  @media (min-width: variables.$tablet-screen) {
+    margin-top: 9px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    margin-top: 0;
+  }
+
+}
+
+.example__slider {
+  position: relative;
+  display: flex;
+  width: 280px;
+  height: 256px;
+  margin: 0 auto;
+
+  @media (min-width: variables.$tablet-screen) {
+    width: 560px;
+    height: 512px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    flex-shrink: 0;
+  }
 }

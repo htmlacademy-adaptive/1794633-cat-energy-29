@@ -7,25 +7,28 @@
   text-align: center;
   padding-top: 8px;
   padding-bottom: 8px;
-  margin-left: auto;
-  margin-right: auto;
   width: 280px;
   display: block;
   border: none;
 
+  @media (min-width: variables.$tablet-screen) {
+    width: 244px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
   &--primary {
     background-color: #68b738;
     color: #ffffff;
-
-    @media (min-width: variables.$tablet-screen) {
-      width: 244px;
-      padding-top: 14px;
-      padding-bottom: 14px;
-    }
   }
 
   &--secondary {
     background-color: #f2f2f2;
     color: #444444;
+  }
+
+  &--centered {
+    margin-left: auto;
+    margin-right: auto;
   }
 }

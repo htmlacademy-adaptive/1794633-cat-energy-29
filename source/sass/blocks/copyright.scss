@@ -1,20 +1,31 @@
 @use "../global/fonts";
 @use "../global/link";
+@use "../global/variables";
 
 .copyright {
+  @include link.reset();
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
+  padding-top: 20px;
+  color: #444444;
+  width: 100%;
+
+  @media (min-width: variables.$tablet-screen) {
+    padding: 0;
+    gap: 23px;
+    width: 300px;
+    justify-content: unset;
+  }
+
+  &::after {
+    content: url("../img/htmlacademy.svg");
+    display: inline-block;
+    width: 27px;
+    height: 34px;
+  }
 }
 
 .copyright__title {
   @include fonts.set-font(lato, #444444, 16px, 20px);
-  margin: 0;
-}
-
-.copyright__title-link {
-  @include link.reset();
-  color: #444444;
-  padding-top: 7px;
-  padding-bottom: 7px;
 }

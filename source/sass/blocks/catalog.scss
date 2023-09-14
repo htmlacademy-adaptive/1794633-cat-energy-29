@@ -1,16 +1,35 @@
 @use "../global/fonts";
 @use "../global/list";
-
-@mixin catalog-card-title-font {
-  @include fonts.set-font(oswald, #222222, 16px, 20px, uppercase);
-}
+@use "../global/variables";
 
 .catalog__title {
   @include fonts.set-font(oswald, #000000, 36px, 36px);
   margin-top: 27px;
   margin-bottom: 41px;
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #000000, 60px, 60px);
+    margin-top: 66px;
+    margin-bottom: 82px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+    margin-top: 75px;
+    margin-bottom: 85px;
+  }
 }
 
 .catalog__list {
   @include list.reset;
+
+  @media (min-width: variables.$tablet-screen) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 60px;
+  }
+
+  @media (min-width: variables.$desktop-screen) {
+
+  }
 }

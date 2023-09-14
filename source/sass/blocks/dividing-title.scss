@@ -1,0 +1,42 @@
+@use "../global/fonts";
+@use "../global/variables";
+
+.dividing-title {
+  @include fonts.set-font(oswald, #000000, 24px, 26px);
+  position: relative;
+  background-color: #ffffff;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: calc(187px + 20px + 20px);
+  display: inline-block;
+
+
+  @media (min-width: variables.$tablet-screen) {
+    @include fonts.set-font(oswald, #000000, 36px, 36px);
+    max-width: calc(512px + 40px + 40px);
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #68b738;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: -100vw;
+    right: 0;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #68b738;
+    height: 2px;
+    width: 100vw;
+    top: 50%;
+    z-index: -1;
+  }
+}
